@@ -5,22 +5,20 @@ import Confetti from "react-confetti";
 
 function App() {
   const [nums, setNums] = useState([
-    { value: 1, freeze: false, id: 0 },
-    { value: 1, freeze: false, id: 1 },
+    { value: 6, freeze: false, id: 0 },
+    { value: 5, freeze: false, id: 1 },
     { value: 1, freeze: false, id: 2 },
-    { value: 1, freeze: false, id: 3 },
-    { value: 1, freeze: false, id: 4 },
-    { value: 1, freeze: false, id: 5 },
-    { value: 1, freeze: false, id: 6 },
-    { value: 1, freeze: false, id: 7 },
-    { value: 1, freeze: false, id: 8 },
-    { value: 1, freeze: false, id: 9 },
+    { value: 3, freeze: false, id: 3 },
+    { value: 3, freeze: false, id: 4 },
+    { value: 5, freeze: false, id: 5 },
+    { value: 2, freeze: false, id: 6 },
+    { value: 4, freeze: false, id: 7 },
+    { value: 6, freeze: false, id: 8 },
+    { value: 4, freeze: false, id: 9 },
   ]);
 
   const [endGame, setEndGame] = useState(false);
 
-  useEffect(() => changeNumber, []);
-  // changeNumber();
   function changeNumber() {
     if (!endGame) {
       setNums((prevState) => {
@@ -44,6 +42,8 @@ function App() {
       setEndGame(() => false);
     }
   }
+
+  useEffect(() => changeNumber, []);
 
   function toggleFreeze(id) {
     setNums((prevState) => {
