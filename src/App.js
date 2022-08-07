@@ -20,7 +20,7 @@ function App() {
   const [endGame, setEndGame] = useState(false);
 
   useEffect(() => changeNumber, []);
-
+  // changeNumber();
   function changeNumber() {
     if (!endGame) {
       setNums((prevState) => {
